@@ -1,7 +1,3 @@
-if [ -f /etc/bashrc ]; then
-	source /etc/bashrc
-fi
-
 for i in ~/.local/bin/*; do
 	if [ ! -d $i ]; then
 		continue
@@ -13,3 +9,7 @@ for i in ~/.local/bin/*; do
 		PATH=$i:$PATH
 	fi
 done
+
+if [ -f /etc/bashrc ]; then
+	source /etc/bashrc
+fi
