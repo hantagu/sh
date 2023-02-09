@@ -4,8 +4,8 @@ sudo dnf -y install https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfr
 sudo dnf -y install gnome-shell gnome-backgrounds gnome-terminal gnome-terminal-nautilus nautilus gnome-text-editor evince eog file-roller gnome-disk-utility gnome-tweaks firefox
 sudo dnf -y install bash-completion docker git ffmpeg cups wireguard-tools fuse flatpak
 
-curl --output "tmp.zip" -sL https://fonts.google.com/download?family=Ubuntu && unzip -qq -u -d ~/.local/share/fonts "tmp.zip" && rm "tmp.zip"
-curl --output "tmp.zip" -sL https://fonts.google.com/download?family=Ubuntu%20Mono && unzip -qq -u -d ~/.local/share/fonts "tmp.zip" && rm "tmp.zip"
+mkdir -p ~/.local/share/fonts
+curl -sL https://raw.githubusercontent.com/hantagu/sh/main/Ubuntu.tar.xz | tar -C ~/.local/share/fonts -Jx
 
 sudo usermod -aG docker $USER
 
