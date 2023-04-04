@@ -9,6 +9,13 @@ curl -sL https://raw.githubusercontent.com/hantagu/sh/main/Ubuntu.tar.xz | tar -
 
 sudo usermod -aG docker $USER
 
+read -p "1/2: " x
+if [ $x = "1" ]; then
+    sudo dnf install xorg-x11-drv-nvidia-cuda
+elif [ $x = "2" ]; then
+    sudo dnf install @hardware-support
+fi
+
 sudo systemctl enable docker.service
 sudo systemctl start docker.service
 
