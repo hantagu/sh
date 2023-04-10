@@ -16,6 +16,9 @@ elif [ $x = "2" ]; then
     sudo dnf install @hardware-support
 fi
 
+sudo systemctl disable avahi-daemon.socket avahi-daemon.service
+sudo systemctl stop avahi-daemon.socket avahi-daemon.service
+
 sudo systemctl enable docker.service
 sudo systemctl start docker.service
 
