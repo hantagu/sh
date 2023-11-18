@@ -1,7 +1,7 @@
 sudo dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf -y install https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-sudo dnf -y install gnome-shell gnome-backgrounds gnome-console nautilus gnome-text-editor evince eog totem file-roller gnome-disk-utility gnome-tweaks firefox
+sudo dnf -y install gnome-shell gnome-backgrounds gnome-console nautilus gnome-text-editor evince loupe totem file-roller gnome-disk-utility gnome-tweaks firefox
 sudo dnf -y install bash-completion docker git ffmpeg cups wireguard-tools fuse flatpak
 
 sudo usermod -aG docker $USER
