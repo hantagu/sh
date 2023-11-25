@@ -8,6 +8,5 @@ mkdir -p ~/.local/share/fonts
 curl -sL https://raw.githubusercontent.com/hantagu/sh/main/ubuntu-font-family-0.83.tar.xz | tar -C ~/.local/share/fonts -Jx
 
 sudo systemctl disable --now avahi-daemon.socket avahi-daemon.service
-sudo systemctl enable --now docker.socket docker.service
 
 sudo systemctl set-default graphical.target
