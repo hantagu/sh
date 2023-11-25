@@ -2,17 +2,12 @@ sudo dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-rel
 sudo dnf -y install https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 sudo dnf -y install gnome-shell gnome-backgrounds gnome-console nautilus gnome-text-editor evince loupe totem file-roller gnome-disk-utility gnome-tweaks firefox
-sudo dnf -y install bash-completion docker git ffmpeg cups wireguard-tools fuse flatpak
-
-sudo usermod -aG docker $USER
+sudo dnf -y install fuse flatpak ffmpeg bash-completion git cups wireguard-tools 
 
 mkdir -p ~/.local/share/fonts
-curl -sL https://raw.githubusercontent.com/hantagu/sh/main/Ubuntu.tar.xz | tar -C ~/.local/share/fonts -Jx
+curl -sL https://raw.githubusercontent.com/hantagu/sh/main/ubuntu-font-family-0.83.tar.xz | tar -C ~/.local/share/fonts -Jx
 
-sudo systemctl disable avahi-daemon.socket avahi-daemon.service
-sudo systemctl stop avahi-daemon.socket avahi-daemon.service
-
-sudo systemctl enable docker.service
-sudo systemctl start docker.service
+sudo systemctl disable --now avahi-daemon.socket avahi-daemon.service
+sudo systemctl enable --now docker.socket docker.service
 
 sudo systemctl set-default graphical.target
