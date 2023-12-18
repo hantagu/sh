@@ -2,13 +2,13 @@ HISTFILE=/dev/null
 
 if [[ ! -f $PREFIX/share/bash-completion/bash_completion ]]
 then
-	yes | pkg update
-	termux-setup-package-manager
-	termux-change-repo
-	yes | pkg upgrade
-	yes | pkg install man manpages gnupg openssl-tool openssh micro
-	yes | pkg install clang python
-	ln -s /storage/emulated/0 storage
+    yes | pkg update
+    termux-setup-package-manager
+    termux-change-repo
+    yes | pkg upgrade
+    yes | pkg install man manpages gnupg openssl-tool openssh micro
+    yes | pkg install clang python
+    ln -s /storage/emulated/0 storage
 fi
 
 alias c="clear"
